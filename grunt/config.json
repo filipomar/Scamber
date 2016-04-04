@@ -1,0 +1,15 @@
+[{
+    "projectName": "eScamber",
+
+    "javascript": [{
+        "folders": [
+            "../webresources/javascript"
+        ],
+        "outputFile": "../App/public/scripts/scripts.js"
+    }],
+
+    "css": [{
+        "folders": ["../webresources/stylesheets"],
+        "outputFile": "../App/public/stylesheets/style.css"
+    }]
+}]

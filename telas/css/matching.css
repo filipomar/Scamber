@@ -1,0 +1,84 @@
+.utensils-slider {
+    height: 330px;
+}
+
+.utensils-slider img {
+    width: 100%;
+    height: 100%;
+}
+
+.utensils-slider .carousel-indicators .active {
+    background-color: #E21171;
+    border-color: #FF8AC0;
+}
+
+.carousel-indicators li {
+    border-color: #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+.utensil-title {
+    font-weight: 700;
+    color: #4C4C4C;
+    margin: 12px 12px 2px 12px;
+}
+
+.utensil-category {
+    font-weight: 700;
+    color: #757575;
+    margin: 12px;
+    margin-top: 0px;
+}
+
+.utensil-owner img {
+    width: 100%;
+    height: 100%;
+}
+
+.utensil-owner-info {
+    padding-top: 10px;
+}
+
+.actions-wrapper {
+    padding: 30px 60px 0px 60px;
+}
+
+.action-wrapper {
+    border-radius: 50%;
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.action-wrapper > span {
+	background: #fff;
+    border-radius: 50%;
+    font-size: 50px;
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+}
+
+.action-wrapper.ignore {
+    background: #FF5B5B;
+}
+
+.action-wrapper.ignore > span {
+    color: #FF5B5B;
+}
+
+.action-wrapper.match {
+    background: #3CB135;
+}
+
+.action-wrapper.match > span {
+    color: #3CB135;
+}
+
+.action-wrapper.match .glyphicon-heart:before {
+    position: relative;
+    right: 2px;
+    top: 3px;
+}

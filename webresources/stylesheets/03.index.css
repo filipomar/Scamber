@@ -1,0 +1,148 @@
+body.escamber-index-page {
+    background-color: #4E6CB1;
+}
+
+.escamber-index-page .tab-options > .btn-group {
+    width: 100%;
+}
+
+.escamber-index-page .tab-options .btn-group label.tab-option.btn {
+    border-radius: 0px;
+}
+
+.escamber-index-page .tab-options .btn-group label.tab-option.btn {
+    background-color: #fff;
+    border-width: 0px;
+    border-bottom: solid 5px #fff;
+    box-shadow: none;
+    color: #A5A5A5;
+    display: block;
+    transition: linear width 0.2s, linear border-bottom-color 0.2s;
+    width: 20%;
+    margin: 0px;
+}
+
+.escamber-index-page .tab-options .btn-group label.tab-option.btn.active {
+    width: 60%;
+    color: #CE3333;
+    border-bottom-color: #F17F7F;
+}
+
+.escamber-index-page .tab-options-content {
+    width: calc(100% + 30px);
+    overflow-x: hidden;
+}
+
+.escamber-index-page .tab-options-content-wrapper {
+    width: 300%;
+    transition: linear margin-left .2s;
+    height: 100%;
+}
+
+.escamber-index-page .tab-option-content {
+    min-height: 400px;
+    width: 33.333333%;
+    float: left;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card {
+    height: calc(100% - 40px);
+    background: #EFEFEF;
+    box-shadow: 10px 7px 7px -4px rgba(0, 0, 0, .19);
+    border-radius: 9px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .carousel {
+    height: 310px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .carousel img {
+    height: 100%;
+    width: 100%;
+    max-height: 260px;
+    max-width: 350px;
+    border-radius: 6px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .carousel .carousel-indicators {
+    bottom: 5px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .carousel .carousel-indicators .active {
+    background-color: #E21171;
+    border-color: #FF8AC0;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .carousel .carousel-indicators li {
+    border-color: #FFF;
+    background-color: #FFF;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-description {
+    margin: 0px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-category-label {
+    margin-top: 6px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-owner {
+    height: 70px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-owner .item-owner-picture {
+    height: 70px;
+    float: left;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-owner .item-owner-name {
+    padding-left: 80px;
+    margin: 0px;
+    padding-top: 6px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .item-actions {
+    margin-top: 10px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper {
+    border-radius: 50%;
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin: 10px 10%;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper.ignore {
+    background: #FF5B5B;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper.match {
+    background: #3CB135;
+}
+
+.action-wrapper > span {
+    background: #EFEFEF;
+    border-radius: 50%;
+    font-size: 40px;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper.ignore > span {
+    color: #FF5B5B;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper.match > span {
+    color: #3CB135;
+}
+
+.escamber-index-page .tab-option-content.matches-option .matches-card .action-wrapper.match .glyphicon-heart:before {
+    position: relative;
+    right: 2px;
+    top: 3px;
+}

@@ -1,0 +1,60 @@
+body {
+    background-color: #425B94;
+}
+
+nav.inventory-nav {
+    margin-bottom: 0px;
+    background-color: #4E6CB1;
+}
+
+nav.inventory-nav .navbar-header button {
+    border: none;
+}
+
+nav.inventory-nav .navbar-brand,
+nav.inventory-nav .navbar-brand:hover,
+nav.inventory-nav .navbar-brand:focus {
+    color: #fff;
+}
+
+nav.inventory-nav .navbar-toggle:hover,
+nav.inventory-nav .navbar-toggle:focus {
+    background-color: #643E82;
+}
+
+nav.inventory-nav .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.inventory-section ul li {
+    min-height: 60px;
+    padding: 15px;
+    box-shadow: -1px 1px 1px -1px #1D1D1D;
+}
+
+.inventory-section ul li .conversation-link {
+    float: right;
+    line-height: 70px;
+    color: #D4E1FF;
+}
+
+.inventory-section ul li .conversation-link .conversation-link-description {
+    font-size: 16px;
+    padding-right: 10px;
+    vertical-align: 4px;
+}
+
+.inventory-section ul li .conversation-link .conversation-link-arrow {
+    font-size: 20px;
+}
+
+.inventory-section ul li .conversation-link-image {
+    max-height: 70px;
+    max-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.inventory-section ul li .conversation-link-image.owned {
+    margin-right: 20px;
+}

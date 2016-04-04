@@ -1,0 +1,77 @@
+# users
+
+- &userF !!models.EUser
+    account: 'filipomar'
+    email: 'filipomar@hotmail.com'
+    fullName: 'Filipe Ventura de Oliveira Pomar'
+    password: 'Escamber1sCool'
+    picture: 'filipomar.jpg'
+
+- &userJ !!models.EUser
+    account: 'johnsmith'
+    email: 'johnsmith@nomail.com'
+    fullName: 'John Smith'
+    password: 'Escamber1sCool'
+    picture: 'johnsmith.png'
+
+- &userM !!models.EUser
+    account: 'marysmith'
+    email: 'marysmith@nomail.com'
+    fullName: 'Mary Smith'
+    password: 'Escamber1sCool'
+    picture: 'marysmith.png'
+
+# messages
+
+- &message1 !!models.EMessage
+    from: *userF
+    to: *userM
+    content: 'Oi'
+
+- &message2 !!models.EMessage
+    from: *userM
+    to: *userF
+    content: 'Olá'
+
+- &message3 !!models.EMessage
+    from: *userM
+    to: *userF
+    content: 'Gibe Monis'
+
+# categories
+
+- &category1 !!models.EItemCategory
+    internalName: 'Cadeiras'
+    publicName: 'Cadeiras'
+
+# items
+- &item1 !!models.EItem
+    name: 'Cadeira IKEA'
+    description: 'Cadeira Branca, modelo StrobillForth, 2009'
+    owner: *userM
+    category: *category1
+    photoOne: 'msmith_1_1.jpg'
+
+- &item2 !!models.EItem
+    name: 'Cadeira Madeira'
+    description: 'Cadeira Madeira, Rústica'
+    owner: *userF
+    category: *category1
+    photoOne: 'filipomar_2_1.jpg'
+
+# likes
+
+- &like1 !!models.EItemView
+    viewer: *userF
+    viewed: *item1
+    liked: true
+
+- &like2 !!models.EItemView
+    viewer: *userM
+    viewed: *item2
+    liked: true
+
+- &like3 !!models.EItemView
+    viewer: *userJ
+    viewed: *item1
+    liked: true
