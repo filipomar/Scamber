@@ -4,19 +4,21 @@
 module IndexModule {
 	abstract class Option {
 		private static TOOL_BAR_HEIGHT = 49;
+		private static MIN_HEIGHT = 618;
+
+		private initialized: boolean;
 		
 		private wrapper: JQuery;
 
 		abstract getId(): string;
+		abstract initialize(): void;
+		abstract deactivate(): void;
 
 		activate() : void {
-			console.log( this );
-
-			// if (isActive) {
-			// 	this.activate();
-			// } else {
-			// 	this.deactivate();
-			// }
+			if (!this.initialized) {
+				this.initialized = true;
+				this.initialize();
+			}
 			this.resize();
 		}
 
@@ -29,7 +31,13 @@ module IndexModule {
 		}
 
 		resize() : void {
-			this.wrapper.height($(window).height() - (Option.TOOL_BAR_HEIGHT));
+			var height = $(window).height() - (Option.TOOL_BAR_HEIGHT);
+			height = Math.max(height, Option.MIN_HEIGHT);
+			this.wrapper.height(height);
+		}
+
+		protected getWrapper() : JQuery {
+			return this.wrapper;
 		}
 	}
 
@@ -37,17 +45,38 @@ module IndexModule {
 		getId(): string {
 			return 'settings-option';
 		}
+
+		initialize() : void {}
+		deactivate(): void {}
 	}
 
 	class MatchesOption extends Option {
 		getId(): string {
 			return 'matches-option';
 		}
+
+		initialize(): void { }
+		deactivate(): void { }
 	}
 
 	class ChatOption extends Option {
+		private convo: JQuery;
+
 		getId(): string {
 			return 'chat-option';
+		}
+
+		initialize(): void {
+			this.convo = this.getWrapper().find('.chat-conversation');
+			var convoPreview = this.convo.find('.chat-preview');
+
+			convoPreview.click(() => {
+				this.convo.toggleClass('open');
+			});
+		}
+
+		deactivate() : void {
+			this.convo.removeClass('open');
 		}
 	}
 
@@ -89,7 +118,12 @@ module IndexModule {
 			return this.options[this.value];
 		}
 
-		private triggerChange() : void {
+		private triggerChange(): void {
+			var oldOption = this.getCurrentOption();			
+			if (oldOption) {
+				oldOption.deactivate();
+			}
+
 			this.refreshSelectedValue();
 			var option = this.getCurrentOption();
 			option.activate();
